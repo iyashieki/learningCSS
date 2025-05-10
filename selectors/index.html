@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /*  - selects all elements -
+       * {
+            color: brown;
+        }
+            */
+        /* - selects all <p> elements -
+        p {
+            background-color: aquamarine;
+        }
+            */
+         /*  - element, element- (selects all elements 1 and 2)
+         p, a {
+                color: blueviolet;
+            }
+        */
+        /* - element element - (selects all p elements inside div elements)
+           div p {
+                color: blueviolet;
+            }
+                */
+          /*  - element> element-(selects all <p> elements where the parent is a <div> element) 
+          div>p {
+                color: blueviolet;
+
+            }
+                */
+        /* - element + element - (selects the first <p> element that is placed immideatly after <div> elements. ex: <div>_</div> <p>)
+            div + p{
+            color: chocolate;
+         }   
+            */ 
+          /* - element~element - ( selects every <p> element that is proceded by a <div> element)
+           div ~ p{ 
+                color: darkgreen;
+            }   
+                */
+             /* - select every p element that is the first child of the parent-
+               div>p:first-child {
+                    color: red;
+                }
+                */
+                /* same thing for the p:last-child, it selects every p element that is the last child of yhe parent */
+                /*p:nth-child(x) , it selects any <p> element that is the xth child of its parents */
+           /* div>nav>a:nth-child(2) { 
+                color: red;
+            } */
+           /*  .div2>ul>li:nth-child(3) {
+                color: brown;
+             } */
+              
+              .div2>ul>div>li:only-child { 
+                color: darkcyan;
+              }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+    <p>Paragraph1</p>
+    <p>Paragraph2</p>
+    <p>Paragraph3</p>
+    <p>Paragraph4</p>
+    <p>Paragraph5</p>
+
+    <nav>
+        <p>Paragraph6</p>
+        <a href="">link 1</a>
+        <a href="">link 2</a>
+        <a href="">link 3</a>
+    </nav>
+        <a href="">link 4</a>
+        <a href="">link 5</a>
+    </div>
+
+    <div class="div2">
+        <p>Paragraph 7</p>
+        <ul>
+            <li>li tag 1 </li>
+            <li>li tag 2</li>
+            <li>li tag 3</li>
+            <div>
+                <li>li tag 4</li>
+            </div>
+        </ul>
+        <p>Paragraph 8</p>
+        <p>Parahraph 9</p>
+    </div>
+        <p>Paragraph10</p>
+        <p>Paragraph11</p>
+    <div>
+        <h3>h3 tag1</h3>
+    </div>
+    <h3>h3 tag2</h3>
+    <h3>h3 tag3</h3>
+    <h3>h3 tag4</h3>
+</body>
+</html>
